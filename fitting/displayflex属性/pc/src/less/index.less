@@ -1,0 +1,140 @@
+*{
+  margin:0;
+  padding:0;
+}
+h2{
+  width:400px;
+  text-align: center;
+  margin:0 auto;
+  font-size:40px;
+  margin-top:40px;
+}
+//display:flex;
+.flex{
+  width:60%;
+  height:800px;
+  margin:10px auto 0;
+  border:4px solid red;
+  background: black;
+  display:flex;//ie10开始支持,父類一共五個屬性
+
+  //flex-direction:row;
+  //row | row-reverse | column | column-reverse;子类排列顺序(会自动留开子类间的空白)
+
+  flex-wrap:wrap ;
+  //nowrap | wrap 换行| wrap-reverse;子类排列是否换行
+
+  //justify-content: space-between;//子类排列方式(会自动留开子类间的空白)
+  //flex-start | flex-end | center中间 | space-between 两边| space-around四周;
+
+  align-items: baseline;//(no会自动留开子类间左右的空白)
+  //flex-start | flex-end | center | baseline基于父类top | stretch;
+
+  align-content:stretch ;//(no会自动留开子类间左右上下的空白)
+  //flex-start | flex-end | center | space-between 基于父类top会留上下的空白 | space-around 会留上下的空白 | stretch 基于父类top会留上下的空白;
+
+
+  //display:table;
+  .flexItem{
+    width:20%;
+    height:10%;
+    background:  white;
+    color:yellow;
+    text-align: center;
+    margin-left:10px;
+    //margin-top:1px;
+    p{
+      width:20px;
+      height:20px;
+      line-height:20px;
+      background: red;
+      border-radius: 50%;//ie9支持
+      margin:20px auto;
+    }
+  }
+  .flex_01{
+    width:80px;
+    height:80px;
+    color:black;
+    order: 10;//order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+    flex-grow:0.8;//flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+    flex-shrink:2;//flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+    flex-basis:auto;//flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+    flex:none;//flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+    align-self:center;//align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+    p{
+      background: yellow;
+    }
+  }
+}
+//display:box;
+.box{
+  width:60%;
+  height:800px;
+  margin:100px auto;
+  background: red;
+  border:4px solid rebeccapurple;
+  border-radius:10px;
+  display:-moz-box;
+  display:-webkit-box;
+  display:box;
+  box-orient:vertical;
+  //horizontal | vertical | inline-axis | block-axis | inherit
+  box-wrap:wrap;
+  .boxItem{
+    //width:20%;
+    height:10%;
+    background:  yellow;
+    color:black;
+    text-align: center;
+    border:2px solid olivedrab;
+    //margin-top:20px;
+    //margin-left:20px;
+    p{
+      width:20px;
+      height:20px;
+      line-height:20px;
+      background: red;
+      border-radius: 50%;//ie9支持
+      margin:0 auto;
+    }
+  }
+  .box_01{
+    width:300px;
+    background: chartreuse;
+    //-moz-box-flex:2;//用於佔位為2/5
+    //-webkit-box-flex:2;
+    //box-flex:2;
+  }
+  .box_02{
+    -moz-box-flex:2;
+    -webkit-box-flex:2;
+    box-flex:2;
+    background: coral;
+    margin:0 50px;//添加margin属性
+  }
+  .box_03{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+  }
+}
+.big{
+  margin:0 auto;
+  width:100px;
+  height:100px;
+  border:2px solid black;
+  border-radius: 10px;
+  .small{
+    width:200px;
+    height:200px;
+    border:2px solid red;
+    border-radius: 10px;
+    //background: chartreuse;
+  }
+}
+
+
+
+
+

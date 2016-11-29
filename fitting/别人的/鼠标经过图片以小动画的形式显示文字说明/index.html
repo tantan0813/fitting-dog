@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>鼠标经过图片以小动画的形式显示文字说明</title>
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css" />
+</head>
+<body>
+<!-- 代码部分begin -->
+<div class="examples_body">
+  <ul class="bannerHolder">
+    <li>
+      <div class="banner"> <a href="#"> <img height="125" width="125" src="http://demo.lanrenzhijia.com/2014/pic1209/images/aloha.jpg" /> </a>
+        <p class="companyInfo">图片信息一</p>
+        <div class="cornerTL"></div>
+        <div class="cornerTR"></div>
+        <div class="cornerBL"></div>
+        <div class="cornerBR"></div>
+      </div>
+    </li>
+    <li>
+      <div class="banner"> <a href="#"> <img height="125" width="125" src="http://demo.lanrenzhijia.com/2014/pic1209/images/season1.jpg" /> </a>
+        <p class="companyInfo">图片信息二</p>
+        <div class="cornerTL"></div>
+        <div class="cornerTR"></div>
+        <div class="cornerBL"></div>
+        <div class="cornerBR"></div>
+      </div>
+    </li>
+    <li>
+      <div class="banner"> <a href="#"> <img height="125" width="125" src="http://demo.lanrenzhijia.com/2014/pic1209/images/season2.jpg" /> </a>
+        <p class="companyInfo">图片信息三</p>
+        <div class="cornerTL"></div>
+        <div class="cornerTR"></div>
+        <div class="cornerBL"></div>
+        <div class="cornerBR"></div>
+      </div>
+    </li>
+    <li>
+      <div class="banner"> <a href="#"> <img height="125" width="125" src="http://demo.lanrenzhijia.com/2014/pic1209/images/slamdunker.jpg" /> </a>
+        <p class="companyInfo">图片信息四</p>
+        <div class="cornerTL"></div>
+        <div class="cornerTR"></div>
+        <div class="cornerBL"></div>
+        <div class="cornerBR"></div>
+      </div>
+    </li>
+    <li>
+      <div class="banner"> <a href="#"> <img height="125" width="125" src="http://demo.lanrenzhijia.com/2014/pic1209/images/seagaia_miyazaki.jpg" /> </a>
+        <p class="companyInfo">图片信息五</p>
+        <div class="cornerTL"></div>
+        <div class="cornerTR"></div>
+        <div class="cornerBL"></div>
+        <div class="cornerBR"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.banner div').css('opacity',0.4);
+	$('.banner').hover(function(){		
+		var el = $(this);
+		el.find('div').stop().animate({width:200,height:200},'slow',function(){
+			el.find('p').fadeIn('fast');
+		});
+	},function(){
+		var el = $(this);
+		el.find('p').stop(true,true).hide();
+		el.find('div').stop().animate({width:60,height:60},'fast');
+	}).click(function(){
+		window.open($(this).find('a').attr('href'));
+	});
+})
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

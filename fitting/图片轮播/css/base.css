@@ -1,0 +1,201 @@
+/*初始化样式*/
+html {overflow-y:scroll;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+ol,ul {list-style:none;}
+address,cite,code,em,th {font-weight:normal; font-style:normal;}
+a { text-decoration:none; }
+/*横行导航栏*/
+.main{
+    width:1200px;
+    height:528px;
+    margin:0 auto;
+}
+.nav{
+    width:1200px;
+    height:44px;
+    font-size: 20px;
+}
+.all{
+    width:200px;
+    height:34px;
+    background: #B1191A;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.nav ul{
+    width:700px;
+    height:34px;
+    position:relative;
+    left:220px;
+    top:-34px;
+}
+.nav a{color: black;}
+.nav li{
+    float:left;
+    margin-left:26px;
+}
+.nav li a:hover{color: red;}
+/*水平分割线*/
+.br{
+    width:10000px;
+    height:2px;
+    position:absolute;
+    top:52px;
+    left:0;
+    background:#B1191A;
+    z-index: 10;
+}
+/*左侧菜单栏*/
+.dd{
+    width:210px;
+    height:480px;
+    background: #b61d1d;
+    margin-top:-32px;
+    color: #fff;
+}
+.item-1,.item-2,.item-3,.item-4,.item-5,.item-6,.item-7,.item-8,.item-9,.item-10,.item-11,.item-12,.item-13,.item-14,.item-15{
+    width:210px;
+    height:32px;
+    font-size: 12px;
+}
+.dd-inner{
+    border-bottom: 1px solid #b61d1d;
+    border-left: 1px solid #b61d1d;
+}
+.dd-inner a{
+    position: relative;
+    margin-left:-6px;
+    color: #fff;
+}
+h3{
+    position:relative;
+    left:12px;
+    font-weight: normal;
+}
+.dd-inner b{
+    position:relative;
+    left:190px;
+}
+.item-1 a{top:-10px;}
+.item-1 b{top:-24px;}
+.item-2 a{top:8px;}
+.item-2 b{top:-4px;}
+.item-3 a,.item-4 a,.item-5 a,.item-6 a,.item-7 a,.item-8 a,.item-9 a,.item-10 a,.item-11 a,.item-12 a,.item-13 a,.item-14 a,.item-15 a{top:6px;}
+.item-3 b,.item-4 b,.item-5 b,.item-6 b,.item-7 b,.item-8 b,.item-9 b,.item-10 b,.item-11 b,.item-12 b,.item-13 b,.item-14 b,.item-15 b{top:-10px;}
+.item-sub{
+    width:988px;
+    min-height:480px;
+    border:1px solid  #b61d1d;
+    border-left:none;
+    position: relative;
+    top:-482px;
+    left:210px;
+    background: white;
+    border-right:1px solid red;
+}
+.icon{
+    width:174px;
+    height:422px;
+    border:1px solid gainsboro;
+    float:left;
+    margin-left: 790px;
+    margin-top:-6px;
+}
+.item-sub{display:none;}
+.onhover{background: white;}
+.dd-inner .onhover a{color: #b61d1d;}
+.chan{
+
+}
+/*图片轮播*/
+.slider {
+    width: 730px;
+    height:468px;
+    overflow: hidden;
+    position: relative;
+    top:-8px;
+    left:220px;
+}
+.slider li {
+    width: 100%;
+    height:480px;
+    border: none;
+}
+.image img{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.sliderList {
+    position: absolute;
+    left:260px;
+    bottom: 10px;
+    width: 200px;
+    list-style: none;
+}
+.list li{
+    width:20px;
+    height:20px;
+    float:left;
+    border-radius: 50%;
+    background: black;
+    opacity: 0.6;
+    text-align: center;
+    font-size:10px;
+    color:white;
+    line-height: 20px;
+    margin-left:8px;
+    cursor:pointer;
+}
+ul .active2{background: red;}
+.button{
+    width:28px;
+    height:62px;
+    background: black;
+    opacity: 0.2;
+    display: none;
+    position: absolute;
+    top:180px;
+    cursor:pointer;
+}
+#next{left:702px;}
+.button b{
+    position: absolute;
+    top:20px;
+    left:8px;
+    color:white;
+}
+.news{
+    width:256px;
+    height:466px;
+    border:1px solid gainsboro;
+    position: relative;
+    top:-476px;
+    left:960px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
