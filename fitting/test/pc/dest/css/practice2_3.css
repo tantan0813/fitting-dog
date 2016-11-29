@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  color: #999;
+  font-size: 13px;
+}
+.container #sum-input {
+  margin-top: 10px;
+}
+.container #sum {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  left: 30.5%;
+}
+.container #result {
+  display: block;
+  left: -18.5%;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f00;
+}

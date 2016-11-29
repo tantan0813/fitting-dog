@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+#main {
+  padding: 10px;
+  height: 400px;
+  width: 400px;
+}
+#main .btn {
+  width: 390px;
+  height: 40px;
+  text-align: center;
+  margin: 0 auto;
+}
+#main .btn .btn-1 {
+  height: 30px;
+}
+#main .btn .btn-2 {
+  height: 30px;
+}
+#main .btn .btn-3 {
+  height: 30px;
+}
+#main .btn .btn-4 {
+  height: 30px;
+}
+#main .container {
+  height: 100px;
+  width: 100px;
+  background: #ccc;
+}

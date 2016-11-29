@@ -1,0 +1,46 @@
+*{margin: 0;padding: 0;font-family: 'Arial';font-size: 14px;}
+@nav-base:#36445F;
+@font:#fff;
+ul,li,a {list-style-type: none;}
+a {text-decoration: none;color: #6076A7;}
+.container {
+	width: 200px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: @nav-base;
+	 .topnav {
+	 	margin: 50px 0 0 50px;
+		//第一层
+		li {
+			img {vertical-align: middle;}
+			a {font-size: 14px;}
+			//第二层
+			ul {
+				display: none;
+				li {
+					margin-left: 10px;
+					a {font-size: 14px;color: @font;}
+					//第三层
+					ul {
+						display: none;
+						li {
+							margin-left: 10px;
+							a {font-size: 14px;color: @font;}
+							//第四层
+							ul {
+								display: none;
+								li{
+									margin-left: 10px;
+									a {font-size: 14px;color: @font;}
+	
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	} 
+}

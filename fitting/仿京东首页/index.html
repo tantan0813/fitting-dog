@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东懒加载练习</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script>
+//        $(document).ready(function() {
+//            $(".goodChannel").lazyload({
+//                placeholder : "images/wait.git",
+//                effect : "fadeIn(800)",
+//                threshold : 200,
+//            });
+//        });
+    </script>
+</head>
+<body>
+<div class="header"></div>
+<div class="goodChannel">
+    <div class="goodChannelHeader">
+        <h3>大家都在逛</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="button">
+                <div class="btnPre"><b><</b></div>
+                <div class="btnNext"><b>></b></div>
+            </div>
+            <ul class="goodList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img  src="images/goods01.jpg" alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">1件</span>
+                        </p>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg" alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">2件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg" alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">3件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">4件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">5件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">6件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                        <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">7件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                        <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">8件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                        <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">9件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                        <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">10件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                        <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">11件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                        <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <p class="goodCounts">本周出售
+                            <span class="counts">12件</span>
+                        </p>
+                        <a href="#">商品简绍</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+<div class="shopFloor">
+    <div class="goodChannel" id="floor-01">
+    <div class="goodChannelHeader">
+        <h3>食品饮料</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                    <li><a href="#">饮料</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#" class="textactive">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>￥6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel "id="floor-02">
+    <div class="goodChannelHeader">
+        <h3>粮油副食</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel "id="floor-03">
+    <div class="goodChannelHeader">
+        <h3>个人护理</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel "id="floor-04">
+    <div class="goodChannelHeader">
+        <h3>护肤美妆</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img class="lazy " src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel "id="floor-05">
+    <div class="goodChannelHeader">
+        <h3>清洁用品</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel" id="floor-06">
+    <div class="goodChannelHeader">
+        <h3>母婴</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel "id="floor-07">
+    <div class="goodChannelHeader">
+        <h3>中外酒水</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel "id="floor-08">
+    <div class="goodChannelHeader">
+        <h3>水果生鲜</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel "id="floor-09">
+    <div class="goodChannelHeader">
+        <h3>宠物生活</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img class="lazy " src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+    <div class="goodChannel "id="floor-10">
+    <div class="goodChannelHeader">
+        <h3>园艺生活</h3>
+    </div>
+    <div class="goodChannelBody">
+        <div class="goods">
+            <div class="goodsBig">
+                <img src="images/goodsBig01.png"alt=""/>
+                <ul class="goodsMore">
+                    <li><a href="#">休闲零食</a><span>+</span></li>
+                    <li><a href="#">水果蜜饯</a><span>+</span></li>
+                </ul>
+            </div>
+            <ul class="goodsList">
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="goodItem">
+                        <div class="goodDetial">
+                            <a href="#"><img src="images/goods01.jpg"alt=""/></a>
+                        </div>
+                        <a href="#">商品信息商品信息商品信息上行下效就的撒覅偶尔我郭恒发呢数据你的粉丝服务叫完全兼容陪我去减肥惹我可能股份</a>
+                        <p class="price">
+                            <span>$6.00</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="goodsImg">
+            <a href="#"><img src="images/goods02.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods03.jpg"alt=""/></a>
+            <a href="#"><img src="images/goods04.jpg"alt=""/></a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer"></div>
+<div class="right-bar">
+    <img src="images/basket.jpg"alt=""/>
+    <a href="#floor-01" class="onactive">食品<br/>饮料</a>
+    <a href="#floor-02">粮油<br/>副食</a>
+    <a href="#floor-03">个人<br/>护理</a>
+    <a href="#floor-04">护肤<br/>美妆</a>
+    <a href="#floor-05">清洁<br/>用品</a>
+    <a href="#floor-06">母婴</a>
+    <a href="#floor-07">中外<br/>名酒</a>
+    <a href="#floor-08">水果<br/>生鲜</a>
+    <a href="#floor-09">宠物<br/>生活</a>
+    <a href="#floor-10">园艺<br/>生活</a>
+    <img src="images/top.jpg"class="goTop"alt=""/>
+    </div>
+</body>
+<script type="text/javascript" src="js/base.js"></script>
+</html>
