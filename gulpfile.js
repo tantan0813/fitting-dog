@@ -14,13 +14,14 @@ const gulpwebpack = require('gulp-webpack');
 const livereload = require('gulp-livereload');
 const uglify = require('gulp-uglify');
 const oader = require('exports-loader');
-const path = require('path');
 const autoprefixer = require('gulp-autoprefixer');
-var cache = require('gulp-cache');
+const cache = require('gulp-cache');
+const path = require('path');
 var postcss = require('gulp-postcss');
 var px2rem = require('postcss-px2rem');
-var processors = [px2rem({remUnit: 75})];
 var plumber = require('gulp-plumber');
+var processors = [px2rem({remUnit:64 })];
+var htmlreplace = require('gulp-html-replace');
 const folderName = process.argv[2];
 // 引入组件
 const cleanCSS = require('gulp-clean-css'),
@@ -60,7 +61,7 @@ let method = {
         switch (sourceType){
             case "all":
                 gulp.watch('' + projectName + '/' + platformName + '/src/js/*.js', method.compilejs);
-                gulp.watch('./' + projectName + '/' + platformName + '/src/less/*.less', method.compileless);
+                gulp.watch('./' + projectName + '/' + platformName + '/src/less/**/**', method.compileless);
                 gulp.watch('./' + projectName + '/' + platformName + '/src/css/*.css', method.compilecss);
                 gulp.watch('./' + projectName + '/' + platformName + '/*.html', method.compilehtml);
                 break;
@@ -68,7 +69,7 @@ let method = {
                 gulp.watch('' + projectName + '/' + platformName + '/src/js/*.js', method.compilejs);
                 break;
             case "less":
-                gulp.watch('./' + projectName + '/' + platformName + '/src/less/*.less', method.compileless);
+                gulp.watch('./' + projectName + '/' + platformName + '/src/less/**/**', method.compileless);
                 break;
             case "img":
                 gulp.watch('./' + projectName + '/' + platformName + '/src/images/**/**', method.compileimg);
@@ -132,13 +133,13 @@ let method = {
         function compile(){
             gulp.src(from) //多个文件以数组形式传入
                 .pipe(plumber())
-                //.pipe(postcss(processors))//pc端注释
+                .pipe(postcss(processors))
                 .pipe(autoprefixer({
-                    browsers: ['last 5 versions', 'Android >= 4.0'],
+                    browsers: ['last 2 versions', 'Android >= 4.0'],
                     cascade: true, //是否美化属性值 默认：true 像这样：
                     //-webkit-transform: rotate(45deg);
                     //        transform: rotate(45deg);
-                    remove:true //是否去掉不必要的前缀 默认：true 
+                    remove:true //是否去掉不必要的前缀 默认：true
                 }))
                 .pipe(cleanCSS())
                 .pipe(gulp.dest(to))
@@ -153,14 +154,16 @@ let method = {
         function compile(){
             gulp.src(from) //多个文件以数组形式传入
                 .pipe(plumber())
-                .pipe(less())
-                //.pipe(postcss(processors))
+				.pipe(less())
+                //.pipe(postcss(processors))//pc的时候需要注释
+                .pipe((platformName=="app" ? postcss(processors) : less()))
+                .pipe(cleanCSS())
                 .pipe(autoprefixer({
-                    browsers: ['last 5 versions', 'Android >= 4.0'],
+                    browsers: ['last 2 versions', 'Android >= 4.0'],
                     cascade: true, //是否美化属性值 默认：true 像这样：
                     //-webkit-transform: rotate(45deg);
                     //        transform: rotate(45deg);
-                    remove:true //是否去掉不必要的前缀 默认：true 
+                    remove:false //是否去掉不必要的前缀 默认：true
                 }))
                 //.pipe(cleanCSS())
                 .pipe(gulp.dest(to))
@@ -179,7 +182,7 @@ let method = {
              progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
              // interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
              // multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化progressive: true,
-             svgoPlugins: [{removeViewflex: false}],//不要移除svg的viewflex属性
+             svgoPlugins: [{removeViewBox: false}],//不要移除svg的viewbox属性
              use: [pngcrush()] //使用pngquant深度压缩png图片的imagemin插件
              })))
             .pipe(gulp.dest(to))
@@ -205,7 +208,9 @@ let method = {
                 .pipe(htmlmin({collapseWhitespace: true}))
                 .pipe(gulp.dest(to))
                 .pipe(livereload());
+
         }
     }
 }
+
 gulp.task(process.argv[2],method[isWatch]);

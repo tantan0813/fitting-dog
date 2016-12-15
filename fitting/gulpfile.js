@@ -1,6 +1,6 @@
 /*
-    gulp hote-app-js:index || gulp hotel-app-js
-*/
+ gulp hote-app-js:index || gulp hotel-app-js
+ */
 const gulp = require('gulp');
 const less = require('gulp-less');
 const sourcemaps = require('gulp-sourcemaps');
@@ -19,7 +19,7 @@ const autoprefixer = require('gulp-autoprefixer');
 var cache = require('gulp-cache');
 var postcss = require('gulp-postcss');
 var px2rem = require('postcss-px2rem');
-var processors = [px2rem({remUnit: 75})];
+var processors = [px2rem({remUnit: 90})];
 var plumber = require('gulp-plumber');
 const folderName = process.argv[2];
 // 引入组件
@@ -89,52 +89,52 @@ let method = {
         var from = path.join(__dirname, './**/**/src/*.js');
         var to = path.join(__dirname, projectName, '/', platformName, '/', './dest/js/');
         /*if(platformName == 'app'){
-            webpackConfig.entry = {
-                common: ['react','react-dom'],
-            };
-        }else{
-            webpackConfig.entry = {
-                common: ['jquery'],
-            };
-        }*/
+         webpackConfig.entry = {
+         common: ['react','react-dom'],
+         };
+         }else{
+         webpackConfig.entry = {
+         common: ['jquery'],
+         };
+         }*/
         /*,'amazeui-touch'*/
         webpackConfig.entry[fileName] = './' + projectName + '/' + platformName + '/src/js/' + fileName + '.js';
         webpackConfig.output.publicPath = "./dest/js/"; // 相对页面的配置
 
         if(isWatch != "watch") {
             webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin({
-               compress: {
-                   warnings: false
-               },
-               output:{
+                compress: {
+                    warnings: false
+                },
+                output:{
                     comments: false
                 },
                 mangle: {
                     except: ['$super', '$', 'exports', 'require']
                 },
-            }));   
+            }));
         }
         compile();
 
         function compile(){
             gulp.src(from)
-            .pipe(gulpwebpack(webpackConfig))
-            .pipe(gulp.dest(to))
-            .pipe(livereload());
+                .pipe(gulpwebpack(webpackConfig))
+                .pipe(gulp.dest(to))
+                .pipe(livereload());
             console.log(sourceType + ": success!");
         }
     },
     compilecss(){
         var from = path.join(__dirname,projectName,'/',platformName,'./src/css/*.css');
         var to = path.join(__dirname,projectName,'/',platformName,'./dest/css/');
-        
+
         compile();
         function compile(){
             gulp.src(from) //多个文件以数组形式传入
                 .pipe(plumber())
-                //.pipe(postcss(processors))//pc端注释
+                .pipe(postcss(processors))
                 .pipe(autoprefixer({
-                    browsers: ['last 5 versions', 'Android >= 4.0'],
+                    browsers: ['last 2 versions', 'Android >= 4.0'],
                     cascade: true, //是否美化属性值 默认：true 像这样：
                     //-webkit-transform: rotate(45deg);
                     //        transform: rotate(45deg);
@@ -154,15 +154,15 @@ let method = {
             gulp.src(from) //多个文件以数组形式传入
                 .pipe(plumber())
                 .pipe(less())
-                //.pipe(postcss(processors))
+                .pipe((platformName=="app" ? postcss(processors) : less()))
                 .pipe(autoprefixer({
-                    browsers: ['last 5 versions', 'Android >= 4.0'],
+                    browsers: ['last 2 versions', 'Android >= 4.0'],
                     cascade: true, //是否美化属性值 默认：true 像这样：
                     //-webkit-transform: rotate(45deg);
                     //        transform: rotate(45deg);
                     remove:true //是否去掉不必要的前缀 默认：true 
                 }))
-                //.pipe(cleanCSS())
+                .pipe(cleanCSS())
                 .pipe(gulp.dest(to))
                 .pipe(livereload());
             console.log(sourceType + ": success!");
@@ -174,15 +174,15 @@ let method = {
         compile();
         function compile(){
             gulp.src(from)
-            .pipe(cache(imagemin({
-             optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
-             progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
-             // interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
-             // multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化progressive: true,
-             svgoPlugins: [{removeViewflex: false}],//不要移除svg的viewflex属性
-             use: [pngcrush()] //使用pngquant深度压缩png图片的imagemin插件
-             })))
-            .pipe(gulp.dest(to))
+                .pipe(cache(imagemin({
+                    optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
+                    progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+                    // interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
+                    // multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化progressive: true,
+                    svgoPlugins: [{removeViewBox: false}],//不要移除svg的viewbox属性
+                    use: [pngcrush()] //使用pngquant深度压缩png图片的imagemin插件
+                })))
+                .pipe(gulp.dest(to))
             console.log(sourceType + ": success!");
         }
     },
@@ -203,6 +203,7 @@ let method = {
         function compile() {
             gulp.src(from)
                 .pipe(htmlmin({collapseWhitespace: true}))
+                .pipe(replace(/dest\//g,'./'))
                 .pipe(gulp.dest(to))
                 .pipe(livereload());
         }
